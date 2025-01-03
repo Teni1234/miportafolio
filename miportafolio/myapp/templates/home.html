@@ -4,27 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Curriculum</title>
+    <title>Mi Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+    <link rel="stylesheet" href="{% static 'css/hojadeestilos.css' %}">
 </head>
 <body>
-    <div class="container-fluid vh-100">
-        <div class="row h-100">
-          <!-- Columna izquierda: Contenido -->
-          <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
-            <h1>¡Hola! Soy Programador</h1>
-            <p>Bienvenido a mi portafolio. Aquí puedes ver mis proyectos, habilidades y más.</p>
-          </div>
-      
-          <!-- Columna derecha: Imagen -->
-          <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <img src="{% static 'images/11.jpg' %}" alt="Imagen principal" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-      
-      
-</body>
 
+    <!-- Fondo de la imagen -->
+    <div class="bg-image"></div>
+
+    <!-- Header con título y menú -->
+    <header class="container-fluid position-absolute top-0 start-0 end-0">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- Título a la Izquierda -->
+            <div class="header-title">
+                <h1 class="title">Desarrollador Full Stack</h1>
+            </div>
+            <!-- Menú a la Derecha -->
+            <nav class="menu">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hologram">
+      <div class="hologram-content">
+        <h2>Bienvenido a mi Portafolio</h2>
+        <p>Explora mis proyectos y habilidades</p>
+      </div>
+    </div>
+    
+</body>
 </html>
