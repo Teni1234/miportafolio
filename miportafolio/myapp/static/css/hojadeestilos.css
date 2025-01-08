@@ -7,163 +7,80 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1;     
+   
+    background-size: cover;
+    
+    
+    
 }
 
-/* Estilo del Header */
+/* Header */
 header {
-    background: rgba(46, 44, 43, 0.8); /* Fondo translúcido */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    background: linear-gradient(to bottom, rgba(74, 144, 226, 0.9), rgba(64, 133, 197, 0.6), rgba(20, 202, 163, 0)); /* Degradado azul a transparente */
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.5); /* Sombra luminosa */
-    transform: translateY(0);
-    padding: px 0; /* Ajuste del padding */
-    display: flex;
-    justify-content: space-between; /* Título a la izquierda y menú a la derecha */
-    align-items: center; /* Alineación vertical */
+    padding: 5px 15px;
+    height: 86px; /* Define la altura fija */
+    box-shadow: none; /* Elimina la sombra para evitar el corte */
 }
+
+
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Más visible al hacer scroll */
+}
+
+
 
 /* Título en la izquierda */
 .header-title h1 {
     font-family: 'Arial', sans-serif;
     font-size: 36px;
-    color: #00ffff;
-    margin: 0;
-    padding: 0;
-    text-shadow: 0 0 10px #007fff, 0 0 20px #00ffff;
-    animation: glow 1.5s infinite alternate, fadeIn 2s ease-out;
-    letter-spacing: 2px;
+    color: #FFFFFF; /* Blanco puro */
+    text-shadow: 0 0 10px #4A90E2, 0 0 20px #50E3C2;
+    animation: glow 1.5s infinite alternate;
 }
 
-/* Animación de Brillo */
 @keyframes glow {
     from {
-        text-shadow: 0 0 5px #007fff, 0 0 10px #00ffff;
+        text-shadow: 0 0 10px #4A90E2, 0 0 20px #50E3C2;
     }
     to {
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #007fff;
+        text-shadow: 0 0 20px #50E3C2, 0 0 40px #4A90E2;
     }
 }
 
-/* Animación de aparición del título */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* Título con resplandor dinámico */
-.header-title h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
-    margin: 0;
-    padding: 0;
-    color: #fff; /* Color base del texto */
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #007fff, 0 0 15px #00ffff, 0 0 20px #007fff;
-    animation: glowText 1.5s infinite alternate; /* Efecto de brillo */
-}
-
-/* Animación de Brillo */
-@keyframes glowText {
-    from {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #007fff, 0 0 15px #00ffff, 0 0 20px #007fff;
-    }
-    to {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #007fff, 0 0 40px #00ffff, 0 0 50px #007fff;
-    }
-}
 
 /* Menú Base */
 .menu .nav-link {
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-    color: #fff;
-    text-transform: uppercase;
+    color: #FFFFFF; /* Blanco puro */
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px;
     transition: all 0.3s ease-in-out;
-    animation: pulse 1.5s infinite alternate; /* Pulsar */
-    position: relative;
-    overflow: hidden;
 }
 
-/* Hover con Color Dinámico */
 .menu .nav-link:hover {
-    color: #00ffff;
-    border-color: #00ffff;
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    transform: perspective(500px) rotateX(10deg) rotateY(10deg) scale(1.1);
-    background: linear-gradient(90deg, #00ffff, #007fff, #00ffff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #FFD700; /* Amarillo dorado al pasar el ratón */
+    background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    border-radius: 5px;
+    transform: scale(1.1); /* Efecto de crecimiento */
 }
 
-/* Subrayado Animado */
-.menu .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: repeating-linear-gradient(
-        45deg,
-        #00ffff,
-        #00ffff 10px,
-        #007fff 10px,
-        #007fff 20px
-    );
-    transition: width 0.5s ease-in-out;
-}
 
-.menu .nav-link:hover::after {
-    width: 100%;
-}
-
-/* Animación de Aparición */
-.menu .nav-item {
-    opacity: 0;
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-.menu .nav-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.menu .nav-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.menu .nav-item:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-/* Keyframes para Animaciones */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #8ec5fc, 0 0 10px #e0c3fc;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    100% {
+        text-shadow: 0 0 15px #8ec5fc, 0 0 30px #e0c3fc;
     }
 }
 
-/* Pulsar */
-@keyframes pulse {
-    from {
-        text-shadow: 0 0 5px #007fff, 0 0 10px #00ffff;
-    }
-    to {
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #007fff;
-    }
+.header-title h1 {
+    animation: glowEffect 1.5s infinite alternate;
 }
