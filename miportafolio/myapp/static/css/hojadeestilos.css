@@ -7,12 +7,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;     
-   
-    background-size: cover;
-    
-    
-    
+    z-index: -1;   
 }
 
 /* Header */
@@ -22,22 +17,28 @@ header {
     width: 100%;
     z-index: 1000;
     padding: 5px 15px;
-    height: 86px; /* Define la altura fija */
+    height: 96px; /* Define la altura fija */
     box-shadow: none; /* Elimina la sombra para evitar el corte */
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Separa los elementos */
 }
-
-
 
 header.scrolled {
     background: rgba(0, 0, 0, 0.8); /* Más visible al hacer scroll */
 }
 
+/* Centrar el título */
+.header-title {
+    position: absolute;
+    left: 50%; /* Posiciona al 50% del ancho */
+    transform: translateX(-50%); /* Ajusta para centrar */
+    text-align: center;
+}
 
-
-/* Título en la izquierda */
 .header-title h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
+    font-family: "Press Start 2P", serif;
+    font-size: 32px;
     color: #FFFFFF; /* Blanco puro */
     text-shadow: 0 0 10px #4A90E2, 0 0 20px #50E3C2;
     animation: glow 1.5s infinite alternate;
@@ -52,32 +53,46 @@ header.scrolled {
     }
 }
 
-
 /* Menú Base */
+/* Contenedor para el menú */
+.menu-wrapper {
+    margin-left: auto; /* Empuja el menú al extremo derecho */
+    position: absolute; /* Saca el menú del flujo normal */
+    right: 50px; /* Alinea el menú al borde derecho con un margen */
+    top: 50%; /* Alinea verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
 .menu .nav-link {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #FFFFFF; /* Blanco puro */
+    font-family: "Press Start 2P", serif;
+    font-size: 14px;
+    color: #6ef8b8;
     text-decoration: none;
     padding: 10px 15px;
-    margin: 0 10px;
     transition: all 0.3s ease-in-out;
 }
 
 .menu .nav-link:hover {
-    color: #FFD700; /* Amarillo dorado al pasar el ratón */
-    background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
-    border-radius: 5px;
-    transform: scale(1.1); /* Efecto de crecimiento */
+    color: #00e1ff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    transform: scale(1.1);
 }
 
 
 @keyframes glowEffect {
     0% {
-        text-shadow: 0 0 5px #8ec5fc, 0 0 10px #e0c3fc;
+        text-shadow: 0 0 5px #8ec5fc, 0 0 10px #8bec88;
     }
     100% {
-        text-shadow: 0 0 15px #8ec5fc, 0 0 30px #e0c3fc;
+        text-shadow: 0 0 15px #8ec5fc, 0 0 30px #8ff08c;
     }
 }
 
